@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memento</title>
+    <link
+      rel="shortcut icon"
+      href="assets/bxs-cylinder.svg"
+      type="image/svg+xml"
+    />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body id="body" class="m-0 p-0 bg-black box-border overflow-x-hidden md:overflow-visible">
+    <!-- Blur -->
+    <div class="fixed -z-20 left-96 top-52">
+      <div
+        class="animate-blob animation-delay-2000 absolute h-[35rem] w-[40rem] rounded-full bg-[#ffa98e] opacity-20 mix-blend-multiply blur-[120px] filter ease-linear top-32"
+      ></div>
+
+      <div
+        class="animate-blob absolute left-64 h-[35rem] w-[40rem] rounded-full bg-[#6c83ff] opacity-20 mix-blend-multiply blur-[120px] filter ease-linear"
+      ></div>
+    </div>
+
+    <!-- !Navigation Bar -->
+    <nav
+      id="navbar"
+      class="flex justify-between px-16 text-white h-36 bg-black items-center font-satoshi top-0 sticky z-50 ease-in duration-200 "
+    >
+      <div>
+        <a class="text-3xl font-bold tracking-tighter" href="#">MEMENTO</a>
+      </div>
+      <div class="space-x-14 tracking-widest font-extralight hidden md:flex">
+        <a class="text-hover" href="#">WHAT WE DO</a>
+        <a class="text-hover" href="#">WHO WE ARE</a>
+        <a class="text-hover" href="#">BEING HERE</a>
+        <a class="text-hover" href="#">CAREERS</a>
+      </div>
+
+      <!-- !Hamburger button -->
+      <div class="md:hidden">
+        <button
+          id="hamburger-btn"
+          class="flex cursor-pointer relative items-center transition duration-500 ease-in-out w-10 h-7"
+        >
+          <div
+            class="line-1 absolute hamburger-0 w-9 h-[0.16rem] bg-white transition rounded-full duration-200 -translate-y-3"
+          ></div>
+          <div
+            class="absolute hamburger w-9 h-[0.16rem] bg-white transition rounded-full duration-200"
+          ></div>
+          <div
+            class="absolute hamburger-2 w-9 h-[0.16rem] bg-white transform transition-transform rounded-full duration-200 translate-y-3"
+          ></div>
+        </button>
+      </div>
+    </nav>
+
+    <div
+      id="menu-navigation"
+      aria-hidden="true"
+      class="h-screen bg-black flex flex-col text-white justify-center tracking-wide font-light font-satoshi space-y-8 pl-20 opacity-0 fixed w-full ease-in-out duration-300 md:opacity-0 z-40 invisible"
+    >
+      <a href="#">WHAT WE DO</a>
+      <a href="#">WORK</a>
+      <a href="#">WHO WE ARE</a>
+      <a href="#">BEING HERE</a>
+      <a href="#">CAREERS</a>
+      <a href="#">CONTACT</a>
+    </div>
+
+    <!-- !Main Content Section -->
+    <main>
+      <section class="section-wrapper">
+        <!--! Hero section -->
+        <section id="hero" class=" transition-opacity opacity-0 ease-in-out duration-[2000ms]">
+          <div class="my-44 px-20">
+            <h1
+              class="text-6xl lg:text-7xl xl:text-8xl text-white font-bold pb-14 lg:pb-20"
+            >
+              <span class="">
+                 Capture<span class=" text-[#6c83ff]">.</span>
+              </span>
+               Produce<span class="text-[#ffa98e]">.</span> Grow<span class="text-[#6c83ff]">.</span>
+            </h1>
+            <p
+              class="text-lg md:text-xl lg:text-2xl xl:text-3xl text-white font-light font-cabinet-grotesk max-w-3xl pb-12 leading-normal"
+            >
+              Over the last 4 years we have committed to capture great
+              experiences for all, produce high quality content, and grow our
+              clients.
+            </p>
+            <button
+              class="w-44 h-14 bg-white font-cabinet-grotesk text-black rounded-full flex items-center justify-center btn-hover"
+              href="#"
+            >
+              Learn more
+              <div>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="18"
+                    fill="#000"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </section>
+
+        <!--! Video Section -->
+        <section>
+          <div class="mb-56">
+            <video class="mx-auto md:px-16" autoplay loop>
+              <source src="images/video.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </section>
+
+        <!--! What we do -->
+        <section id="title" class="transition-opacity opacity-0 ease-out duration-1000">
+          <div class="mb-56 px-20">
+            <h2
+              class="text-4xl md:text-5xl lg:text-6xl text-white md:max-w-3xl lg:max-w-4xl text-center mx-auto"
+            >
+              We enrich human lives by encapsulating the beauty and simplicity
+              of life.
+            </h2>
+          </div>
+        </section>
+
+        <!-- ! Info Section -->
+        <section id="info" class="duration-300 transition-all opacity-0 ease-linear -translate-x-8 transform">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-y-10 lg:gap-y-0 place-items-center px-20 mb-64"
+          >
+            <div>
+              <img
+                loading="lazy"
+                class="h-full w-full"
+                src="images/person.jpeg"
+                alt="a person wearing glasses holding multiple cameras"
+              />
+            </div>
+            <div
+              class="space-y-12 h-full flex flex-col justify-center px-10 md:px-20 lg:px-24 xl:px-32"
+            >
+              <p
+                class="font-light text-white text-2xl xl:text-3xl"
+              >
+                We are happy to announce Lorem Ipsum as Memento's next CEO.
+                Ipsum's as a president of Memento has played an essential role
+                for us to grow as a studio over the past 4 years.
+              </p>
+              <button
+                class="w-44 h-14 btn-hover bg-white font-cabinet-grotesk text-black rounded-full flex items-center justify-center"
+                href="#"
+              >
+                Learn more
+                <div>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="18"
+                      fill="#000"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section id="info" class="duration-300 transition-all opacity-0 ease-linear -translate-x-8 transform overflow-x-hidden">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-y-10 lg:gap-y-0 place-items-center px-20 mb-64"
+          >
+            <div
+              class="space-y-12 h-full flex flex-col justify-center px-10 md:px-20 lg:px-24 xl:px-32 order-1 lg:-order-1"
+            >
+              <p
+                class="font-light text-white text-2xl xl:text-3xl leading-normal"
+              >
+                As a service to the world's most ambitious companies and
+                artists, we create inspirational change through our
+                best-in-class creatives.
+              </p>
+              <button
+                class="w-44 h-14 btn-hover bg-white font-cabinet-grotesk text-black rounded-full flex items-center justify-center"
+                href="#"
+              >
+                Learn more
+                <div>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="18"
+                      fill="#000"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+            <div class="">
+              <img
+                loading="lazy"
+                class="w-full h-full"
+                src="images/image1.jpeg"
+                alt="a group of people in a studio with low lighting"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section id="info" class="duration-300 transition-all opacity-0 ease-linear -translate-x-8 transform">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-y-10 lg:gap-y-0 place-items-center px-20 mb-64"
+          >
+            <div>
+              <img
+                loading="lazy"
+                class="w-full h-full"
+                src="images/lightblock.jpeg"
+                alt="3D rendered abstract cubes in a dull background"
+              />
+            </div>
+            <div
+              class="space-y-12 h-full flex flex-col justify-center px-10 md:px-20 lg:px-24 xl:px-32"
+            >
+              <p
+                class="font-light text-white text-2xl xl:text-3xl leading-normal"
+              >
+                Until recently, Memento started to diversify and extend our work
+                for our clients through the usage of Artifical Intelligence.
+              </p>
+              <button
+                class="w-44 h-14 btn-hover bg-white font-cabinet-grotesk text-black rounded-full flex items-center justify-center"
+                href="#"
+              >
+                Read more
+                <div>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="18"
+                      fill="#000"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- end of info section -->
+
+        <section id="title" class="transition-opacity opacity-0 ease-out duration-1000">
+          <div class="flex flex-col items-center gap-10 mb-64 px-32 lg:px-20">
+            <h2
+              class="text-4xl md:text-5xl text-white max-w-2xl text-center leading-normal"
+            >
+              Explore a few of our most impactful projects
+            </h2>
+            <button
+              class="w-44 h-14 btn-hover bg-white font-cabinet-grotesk text-black rounded-full flex items-center justify-center"
+              href="#"
+            >
+              Our work
+              <div>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="18"
+                    fill="#000"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </section>
+
+        <!-- !Brand Examples -->
+        <section id="card" class="duration-500 transition-opacity opacity-0 ease-linear">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 text-white px-0 md:px-12 lg:px-20 lg:gap-10"
+          >
+            <div class="col-span-1 mx-auto mb-32 cursor-pointer">
+              <img
+                loading="lazy"
+                class="lg:h-[29rem] lg:w-[42rem] w-max h-max object-cover"
+                src="images/artroom.jpeg"
+                alt="an art room"
+              />
+              <div
+                class="mt-6 pl-16 pr-16 space-x-0 space-y-4 md:space-y-0 md:px-0 md:flex md:justify-between lg:mt-8 lg:space-y-5 lg:block lg:pl-0"
+              >
+                <h2 class="font-satoshi font-medium text-3xl">
+                  Florentine Institute
+                </h2>
+                <p
+                  class="max-w-xl md:max-w-lg lg:max-w-xl font-cabinet-grotesk font-light text-base tracking-widest leading-relaxed"
+                >
+                  Jay and Lucy laid the foundation for modern art that are
+                  unprecedented. With an inspiration to bring "Florentine"
+                  unique methodologies to a modern audience, the Florentine
+                  Institute enlisted Memento to co-create a digital platform to
+                  unveil their vast collection to the world.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-span-1 mx-auto mb-32 cursor-pointer">
+              <img
+                loading="lazy"
+                class="lg:h-[29rem] lg:w-[42rem] w-max h-max object-cover"
+                src="images/bakery.jpeg"
+                alt="a picture of baked goods"
+              />
+              <div
+                class="mt-6 pl-16 pr-16 space-x-0 space-y-4 md:space-y-0 md:px-0 md:flex md:justify-between lg:mt-8 lg:space-y-5 lg:block lg:pl-0"
+              >
+                <h2 class="font-satoshi font-medium text-3xl">Kyouka Bakery</h2>
+                <p
+                  class="max-w-xl md:max-w-lg lg:max-w-xl font-cabinet-grotesk font-light text-base tracking-widest leading-relaxed"
+                >
+                  Kyouka Bakery is on a path to becoming one of the most popular
+                  bakeries in Japan. To encapsulate customers in scrumptious
+                  baked goods and cosy atmosphere, we helped Kyouka Bakery to
+                  capture that exact experience to their customers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- !Logo Brands -->
+        <section>
+          <div
+            class="mb-32 md:mb-0 md:h-screen flex justify-center items-center px-20 gap-10"
+          >
+            <div
+              class="h-64 w-64 flex flex-col-reverse items-center overflow-hidden gap-20 pb-20"
+            >
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#fff"
+                  class="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-2.046 4.265-.966.925a.28.28 0 0 0-.106.271v6.801a.28.28 0 0 0 .106.271l.942.926v.204h-4.741v-.204l.977-.948c.097-.096.097-.125.097-.271V9.742l-2.716 6.896h-.368L8.018 9.742v4.622a.644.644 0 0 0 .176.531l1.271 1.541v.203H5.861v-.203l1.271-1.541a.618.618 0 0 0 .164-.531V9.02a.468.468 0 0 0-.152-.395l-1.13-1.36v-.203H9.52l2.71 5.943 2.382-5.943h3.343v.203z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#fff"
+                  class="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M13.337 9h-2.838v3h2.838a1.501 1.501 0 1 0 0-3z" />
+                  <path
+                    d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1.337 12h-2.838v3H8.501V7h4.837a3.498 3.498 0 0 1 3.499 3.499 3.499 3.499 0 0 1-3.5 3.501z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#fff"
+                  class="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12.01 2.019c-5.495 0-9.991 4.496-9.991 9.991 0 5.494 4.496 9.99 9.991 9.99 5.494 0 9.99-4.496 9.99-9.99 0-5.495-4.446-9.991-9.99-9.991zm4.595 14.436c-.199.299-.549.4-.85.201-2.349-1.45-5.296-1.75-8.793-.951-.348.102-.648-.148-.748-.449-.101-.35.149-.648.45-.749 3.795-.85 7.093-.499 9.69 1.1.35.149.4.548.251.848zm1.2-2.747c-.251.349-.7.499-1.051.249-2.697-1.646-6.792-2.148-9.939-1.148-.398.101-.85-.1-.949-.498-.101-.402.1-.852.499-.952 3.646-1.098 8.143-.548 11.239 1.351.3.149.45.648.201.998zm.099-2.799c-3.197-1.897-8.542-2.097-11.59-1.146a.938.938 0 0 1-1.148-.6.937.937 0 0 1 .599-1.151c3.547-1.049 9.392-.85 13.089 1.351.449.249.599.849.349 1.298-.25.35-.849.498-1.299.248z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#fff"
+                  class="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20.886 9.264c-1.502-1.5-3.941-1.5-5.475 0l-6.13 6.131a.981.981 0 0 0 0 1.377.982.982 0 0 0 1.376 0l6.13-6.131a1.925 1.925 0 0 1 2.722 2.723l-6.037 6.035c.751.75 1.971.75 2.723 0l4.66-4.66c1.531-1.534 1.531-3.973.031-5.475zm-2.064 2.033a.982.982 0 0 0-1.376 0l-6.134 6.162c-.751.75-1.97.75-2.72 0-.376-.375-1.002-.375-1.377 0s-.375 1.002 0 1.375c1.502 1.502 3.942 1.502 5.475 0l6.131-6.129c.375-.406.375-1.033.001-1.408zm-2.035-6.129c-1.501-1.502-3.941-1.502-5.475 0l-6.131 6.129a.98.98 0 0 0 0 1.375.98.98 0 0 0 1.377 0l6.168-6.129a1.934 1.934 0 0 1 2.727 0 .982.982 0 0 0 1.376 0c.352-.406.352-1-.024-1.375h-.018zm-2.063 2.031a.978.978 0 0 0-1.376 0l-6.131 6.164a1.933 1.933 0 0 1-2.723 0 1.927 1.927 0 0 1 0-2.723l6.037-6.039a1.928 1.928 0 0 0-2.722 0L3.118 9.264c-1.501 1.502-1.501 3.941 0 5.475 1.501 1.502 3.94 1.502 5.475 0l6.129-6.131c.377-.408.377-1.033 0-1.408h.002z"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div
+              class="h-64 w-64 flex flex-col-reverse items-center overflow-hidden gap-20 pb-20"
+            >
+              <div class="block">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#fff"
+                  class="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12.001 16.709c-1.013-1.271-1.609-2.386-1.808-3.34-.197-.769-.12-1.385.218-1.848.357-.532.89-.791 1.589-.791s1.231.259 1.589.796c.335.458.419 1.075.215 1.848-.218.974-.813 2.087-1.808 3.341l.005-.006zm7.196.855c-.14.934-.775 1.708-1.65 2.085-1.687.734-3.359-.437-4.789-2.026 2.365-2.961 2.803-5.268 1.787-6.758-.596-.855-1.449-1.271-2.544-1.271-2.206 0-3.419 1.867-2.942 4.034.276 1.173 1.013 2.506 2.186 3.996-.735.813-1.432 1.391-2.047 1.748-.478.258-.934.418-1.37.456-2.008.299-3.582-1.647-2.867-3.656.1-.259.297-.734.634-1.471l.019-.039c1.097-2.382 2.43-5.088 3.961-8.09l.039-.1.435-.836c.338-.616.477-.892 1.014-1.231.258-.157.576-.235.934-.235.715 0 1.271.418 1.511.753.118.18.259.419.436.716l.419.815.06.119c1.53 3.001 2.863 5.702 3.955 8.089l.02.019.401.915.237.573c.183.459.221.915.16 1.393l.001.002zm.913-1.791c-.139-.438-.378-.953-.675-1.569v-.022a262.99 262.99 0 0 0-3.976-8.128l-.084-.121C14.486 4.109 13.849 3.014 12 3.014c-1.827 0-2.604 1.27-3.397 2.922l-.061.119c-1.251 2.426-2.564 5.128-3.975 8.13v.039l-.418.914c-.158.378-.237.575-.259.636C2.878 18.556 4.964 21 7.489 21c.021 0 .099 0 .198-.021h.278c1.313-.159 2.664-.993 4.035-2.485 1.371 1.49 2.725 2.326 4.033 2.485h.279c.1.021.18.021.2.021 2.525.002 4.61-2.444 3.598-5.227z"
+                  />
+                </svg>
+              </div>
+              <div class="block">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#fff"
+                  class="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7.803 5.731c.589 0 1.119.051 1.605.155.483.103.895.273 1.243.508.343.235.611.547.804.939.187.387.28.871.28 1.443 0 .62-.14 1.138-.421 1.551-.283.414-.7.753-1.256 1.015.757.219 1.318.602 1.69 1.146.374.549.557 1.206.557 1.976 0 .625-.119 1.162-.358 1.613a3.11 3.11 0 0 1-.974 1.114 4.315 4.315 0 0 1-1.399.64 6.287 6.287 0 0 1-1.609.206H2V5.731h5.803zm-.351 4.972c.48 0 .878-.114 1.192-.345.312-.228.463-.604.463-1.119 0-.286-.051-.522-.151-.707a1.114 1.114 0 0 0-.417-.428 1.683 1.683 0 0 0-.597-.215 3.609 3.609 0 0 0-.697-.061H4.71v2.875h2.742zm.151 5.239c.267 0 .521-.023.76-.077.241-.052.455-.136.637-.261.182-.12.332-.283.44-.491.109-.206.162-.475.162-.798 0-.634-.179-1.085-.533-1.358-.355-.27-.831-.404-1.414-.404H4.71v3.39h2.893zm8.565-.041c.367.358.896.538 1.584.538.493 0 .919-.125 1.278-.373.354-.249.57-.515.653-.79h2.155c-.346 1.072-.871 1.838-1.589 2.299-.709.463-1.572.693-2.58.693-.702 0-1.334-.113-1.9-.337a4.033 4.033 0 0 1-1.439-.958 4.37 4.37 0 0 1-.905-1.485 5.433 5.433 0 0 1-.32-1.899c0-.666.111-1.289.329-1.864a4.376 4.376 0 0 1 .934-1.493c.405-.42.885-.751 1.444-.994a4.634 4.634 0 0 1 1.858-.362c.754 0 1.413.146 1.979.44a3.967 3.967 0 0 1 1.39 1.182c.363.493.622 1.058.783 1.691.161.632.217 1.292.171 1.983h-6.431c.001.704.238 1.371.606 1.729zm2.812-4.681c-.291-.322-.783-.496-1.385-.496-.391 0-.714.065-.974.199a1.97 1.97 0 0 0-.62.491 1.772 1.772 0 0 0-.328.628 2.82 2.82 0 0 0-.111.587h3.982c-.058-.624-.272-1.085-.564-1.409zm-3.918-4.663h4.989v1.215h-4.989z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#fff"
+                  class="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12.005 21.992v-3.877c4.104 0 7.288-4.068 5.714-8.388a5.81 5.81 0 0 0-3.457-3.446c-4.319-1.563-8.389 1.61-8.389 5.714H2.008c0-6.541 6.325-11.642 13.184-9.499 2.991.94 5.383 3.321 6.313 6.313 2.141 6.858-2.96 13.183-9.5 13.183z"
+                  />
+                  <path
+                    d="M12.017 18.139H8.152v-3.866h3.865zm-3.865 2.959H5.193v-2.959h2.959zm-2.959-2.959H2.711v-2.483h2.482v2.483z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#fff"
+                  class="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M11.139 14.058c-.438 0-.693-.294-.693-1.058v-2.696l1.456.112.074-.694-1.496.074v-1.53h-.438c-.216 1.201-.759 1.638-1.488 1.712v.364h.869v3.062c0 .836.588 1.271 1.313 1.271.585 0 1.202-.255 1.418-.763l-.217-.255c-.108.18-.402.401-.798.401zm-3.494-.803c-.294.69-.767.729-1.24.729h-1.53c-.508 0-.729-.186-.729-.62v-2.258s1.092 0 1.457.039c.291.035.438.109.546.473l.108.511h.438l-.039-1.309.074-1.278h-.434l-.147.585c-.073.399-.147.438-.546.508-.508.038-1.457.038-1.457.038V7.979c0-.112 0-.147.185-.147h2.291c.402 0 .62.326.763.98l.147.512h.399c.039-1.457.074-2.074.074-2.074s-.981.105-1.562.105H3.53L2 7.324v.399l.508.107c.367.074.475.147.475.473 0 0 .039.984.039 2.619 0 1.639-.039 2.623-.039 2.623 0 .291-.108.399-.475.473L2 14.131v.396l1.565-.035h2.623c.581 0 1.965.035 1.965.035.034-.361.216-1.964.255-2.146H8.04l-.395.874zm6.04-2.622c0-.474.437-.655.875-.655.36 0 .653.147.729.325l.255.729.361-.035c0-.364.038-.838.111-1.201-.328-.147-.983-.221-1.421-.221-.984 0-1.747.441-1.747 1.387 0 1.674 2.44 1.31 2.44 2.549 0 .399-.256.729-.876.729-.581 0-.837-.294-.945-.585l-.29-.693h-.369c.04.476.074.948 0 1.382 0 0 .767.294 1.531.294 1.022 0 1.858-.507 1.858-1.457 0-1.674-2.512-1.421-2.512-2.548zm6.369-.945v.364l.259.074c.252.07.36.178.36.363 0 .108-.034.144-.073.291-.108.291-.802 2.003-1.162 2.767a75.566 75.566 0 0 1-1.093-2.949c-.035-.073-.035-.108-.035-.146 0-.148.105-.292.361-.326l.329-.074v-.364l-1.346.073-1.096-.039v.368l.187.069c.251.074.287.11.469.512.693 1.53 1.457 3.529 1.716 4.15-.584 1.019-1.204 1.309-1.677 1.309-.291 0-.399-.147-.435-.329l-.146-.763-.4.035c-.073.477-.147.984-.255 1.383.287.182.616.294 1.053.293.691 0 1.675-.182 2.623-2.332l1.601-3.747c.145-.293.182-.329.546-.476l.183-.144v-.362l-.945.034-1.024-.034z"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div
+              class="h-64 w-64 flex flex-col-reverse items-center overflow-hidden gap-20 pb-20"
+            >
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#fff"
+                  class="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.625 8.063V3h6.75v5.063h-6.75zm6.75 2.812H21V21H3V10.875h5.625v5.063h6.75v-5.063z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#fff"
+                  class="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M17.47 6.07a4.54 4.54 0 0 0-4.38 3.69 19.9 19.9 0 0 1-2.28-4.9H8.55v6a2.14 2.14 0 1 1-4.28 0v-6L2 4.91v6a4.4 4.4 0 1 0 8.8-.05v-1a20.55 20.55 0 0 0 1.65 2.7l-1.38 6.61h2.32l1-4.81a5.61 5.61 0 0 0 3.11.89 4.57 4.57 0 0 0 0-9.14zm0 6.83a4.09 4.09 0 0 1-2.55-1l.23-.91v-.05c.16-1 .66-2.6 2.35-2.6a2.25 2.25 0 0 1 2.27 2.24 2.41 2.41 0 0 1-2.27 2.32z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#fff"
+                  class="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M13.444 8.256c-.4.212-.544.562-.544 1.53 0 0 .202-.194.499-.303a2.01 2.01 0 0 0 .512-.275c.338-.247.385-.562.385-1.096 0 0-.553-.016-.852.144zm-2.349.229c-.32.286-.418.739-.418.739l-1.078 4.141L8.71 9.97c-.087-.355-.246-.808-.495-1.107-.31-.378-.944-.401-1.015-.401-.068 0-.709.023-1.026.407-.246.303-.406.751-.493 1.108l-.889 3.395-1.066-4.147s-.092-.459-.418-.739c-.529-.465-1.314-.367-1.314-.367l2.048 7.764s.677.052 1.015-.126c.441-.224.659-.401.929-1.463.241-.94.912-3.704.974-3.905.029-.098.07-.332.241-.332.179 0 .214.229.241.332.064.195.729 2.965.976 3.905.268 1.055.481 1.227.929 1.463.338.178 1.015.126 1.015.126l2.048-7.759c-.002 0-.789-.099-1.315.361zm3.201.9s-.129.195-.42.367c-.188.104-.367.178-.562.271-.323.154-.414.332-.414.595v5.266s.522.063.854-.104c.436-.222.533-.435.541-1.404V9.385zm5.112 2.632 2.599-3.875s-1.096-.189-1.641.309c-.35.315-.738.885-.738.885l-.952 1.386c-.053.069-.104.15-.2.15-.099 0-.161-.075-.202-.15l-.962-1.382s-.385-.568-.74-.884c-.54-.499-1.641-.31-1.641-.31l2.603 3.865-2.603 3.858s1.146.149 1.688-.35c.35-.315.688-.837.688-.837l.95-1.383c.053-.068.104-.147.2-.147.1 0 .161.075.202.147l.952 1.383s.355.51.7.837c.538.499 1.667.35 1.667.35l-2.57-3.852z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#fff"
+                  class="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- !CTA -->
+        <section id="title" class="transition-opacity opacity-0 ease-out duration-1000">
+          <div class="flex flex-col items-center gap-10 mb-64 px-40">
+            <h2
+              class="text-4xl md:text-5xl lg:text-6xl text-white max-w-4xl text-center leading-normal"
+            >
+              We'd love to work with you and your team
+            </h2>
+            <button
+              class="w-44 h-14 btn-hover bg-white font-cabinet-grotesk text-black rounded-full flex items-center justify-center"
+              href="#"
+            >
+              Get in touch
+              <div>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="18"
+                    fill="#000"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- ! FOOTER -->
+    <footer
+      class="grid grid-cols-2 md:grid-cols-4 w-full font-satoshi text-white font-extralight py-14 bg-black gap-y-12"
+    >
+      <!-- !First Col Link -->
+      <div class="col-span-1">
+        <ul class="space-y-8 tracking-widest pl-16">
+          <li class="text-hover">
+            <a href="">HOME</a>
+          </li>
+          <li class="text-hover">
+            <a href="">WHAT WE DO</a>
+          </li>
+          <li class="text-hover">
+            <a href="">WORK</a>
+          </li>
+          <li class="text-hover">
+            <a href="">WHO WE ARE</a>
+          </li>
+          <li class="text-hover">
+            <a href="">ARTICLES</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ! Second COL Link -->
+      <div class="col-span-1">
+        <ul class="space-y-8 tracking-widest pl-16 ">
+          <li class="text-hover">
+            <a href="">BEING HERE</a>
+          </li>
+          <li class="text-hover">
+            <a href="">CAREERS</a>
+          </li>
+          <li class="text-hover">
+            <a href="">CONTACT</a>
+          </li>
+          <li class="text-hover">
+            <a href="">PRIVACY</a>
+          </li>
+        </ul>
+      </div>
+
+      <!--!Newsletter Button -->
+      <div
+        class="col-span-1 flex items-end justify-start pl-16 md:pl-0 lg:justify-end"
+      >
+        <button
+          class="w-48 h-14 font-satoshi tracking-wider font-extralight text-white border border-stone-600 rounded-full flex items-center justify-center"
+          href="#"
+        >
+          NEWSLETTER
+          <div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="18"
+                fill="#fff"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+                />
+              </svg>
+            </div>
+          </div>
+        </button>
+      </div>
+
+      <!-- !Socials -->
+      <div class="col-span-1 flex items-end justify-evenly pb-2">
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#fff"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"
+            />
+            <circle cx="16.806" cy="7.207" r="1.078" />
+            <path
+              d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"
+            />
+          </svg>
+        </a>
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#fff"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
+            />
+          </svg>
+        </a>
+
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#fff"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
