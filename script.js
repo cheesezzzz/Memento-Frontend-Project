@@ -103,4 +103,32 @@ info.forEach(function (info) {
   infoObserver.observe(info);
 });
 
-// !Logo
+// !Logos
+
+const logo = document.querySelectorAll("#logo");
+const logoSlider = document.querySelector("#logoSlider");
+
+console.log(logo.length);
+
+let curSlide = 0;
+const maxSlide = logo.length;
+
+logo.forEach((s, i) => s.classList.add('logo-active'))
+logo.forEach(
+    (s, i) => (s.style.transform = `translateY(${200 * (i - curSlide)}%)`)
+  );
+
+const logoAnimation = setInterval(function () {
+  logo.forEach(
+    (s, i) => (s.style.transform = `translateY(${200 * (i - curSlide)}%)`)
+  );
+  if (curSlide === maxSlide - 1) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+}, 800);
+
+logoAnimation();
+
+console.log(logo.length);

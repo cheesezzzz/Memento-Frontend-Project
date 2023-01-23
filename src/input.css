@@ -2,13 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn-hover {
-  @apply hover:bg-gray-300 transition duration-300
-}
 
-.text-hover {
-  @apply hover:text-gray-300 transition duration-200
-}
 
 @layer utilities {
   .animation-delay-2000 {
@@ -17,6 +11,22 @@
 
   .animation-delay-4000 {
     animation-delay: 4s;
+  }
+
+  .btn-hover {
+    @apply hover:bg-gray-300 transition duration-300
+  }
+  
+  .text-hover {
+    @apply hover:text-gray-300 transition duration-200
+  }
+  
+  .logo {
+    @apply top-0 left-0 absolute transition-all -translate-y-5 ease-in-out opacity-0
+  }
+
+  .logo-active {
+    @apply translate-y-0 visible opacity-100
   }
 }
 
